@@ -30,7 +30,8 @@
             JSON.stringify({
               error: false,
               message: result.text
-            })
+            }),
+            "*"
           );
         }
         if (err && !(err instanceof ZXing.NotFoundException)) {
@@ -41,7 +42,8 @@
             JSON.stringify({
               error: true,
               message: err
-            })
+            }),
+            "*"
           );
         }
       })
